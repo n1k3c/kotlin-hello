@@ -73,7 +73,7 @@ fun helloWorld(val name : String) {
    We can use the ?: operator to specify an alternative value to use
    if a variable is null.
    */
-    var fooNullable : String? = "ejbici"
+    var fooNullable: String? = "ejbici"
     println(fooNullable?.length)
     println(fooNullable?.length ?: -1)
     fooNullable = null

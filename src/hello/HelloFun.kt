@@ -9,10 +9,20 @@ fun main(args: Array<String>) {
     hello11Type()
     hello1OneLiner()
 
+    println("\n")
+
     hello2("Nikola")
     println("${hello3()}")
     println(hello3("Nikola1"))
     println(hello3(name = "Nikola2"))
+    hello4("Nikola", 7)
+
+    println("\n")
+
+    varargExample() // => Argument has 0 elements
+    varargExample(1) // => Argument has 1 elements
+    varargExample(1, 3, 3) // => Argument has 3 elements
+    names("Nikola", "Marko", "Teletabis", age = 24)
 }
 
 /*
@@ -27,7 +37,7 @@ fun hello1() {
     println("Hello1")
 }
 
-fun hello11Type() : Unit {
+fun hello11Type(): Unit {
     println("Hello1 Unit")
 }
 
@@ -40,3 +50,26 @@ fun hello2(name: String) {
 fun hello3(name: String = "World"): String {
     return "Hello $name!"
 }
+
+fun hello4(name: String, number: Int) {
+    println("Name is $name, number is $number")
+}
+
+/*
+A function parameter may be marked with the "vararg" keyword
+to allow a variable number of arguments to be passed to the function.
+*/
+fun varargExample(vararg number: Int) {
+    println("Argument has ${number.size} arguments.")
+
+    for (name in number) {
+        println(name)
+    }
+}
+
+fun names(vararg names: String, age: Int) {
+    for (n in names) {
+        println("$n is $age old")
+    }
+}
+
