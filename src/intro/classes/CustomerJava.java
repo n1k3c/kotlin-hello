@@ -1,5 +1,7 @@
 package intro.classes;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by nikola on 6/6/17.
  */
@@ -43,5 +45,17 @@ public class CustomerJava {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    public void prettyPrint() {
+        System.out.printf("Id %id - Name: %s", id, name);
+    }
+
+    public @NotNull String neverNull() {
+        return "A String";
+    }
+
+    public String sometimesNull() {
+        return "A String";
     }
 }
