@@ -28,7 +28,7 @@ fun main(args: Array<String>) {
     println(fooCopy)
 
     // Objects can be destructured into multiple variables.
-    val(a, b, c) = fooCopy
+    val (a, b, c) = fooCopy
     println("$a, $b, $c")
 
     // Destructuring in "for" loop
@@ -44,9 +44,9 @@ fun main(args: Array<String>) {
     }
 
     // The "with" function is similar to the JavaScript "with" statement.
-    val fooMutableData = MutableDataClassExample(10, 20 , 30)
+    val fooMutableData = MutableDataClassExample(10, 20, 30)
 
-    with (fooMutableData) {
+    with(fooMutableData) {
         x -= 1
         y += 2
         z--
