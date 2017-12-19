@@ -48,7 +48,6 @@ fun mixOptimized(c1: Color, c2: Color) = when {
     else -> throw Exception("Dirty color")
 }
 
-
 fun main(args: Array<String>) {
     println(Color.BLUE.rgb())
 
