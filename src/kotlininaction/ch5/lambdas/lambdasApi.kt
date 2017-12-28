@@ -41,4 +41,13 @@ fun main(args: Array<String>) {
             Book("Mort", listOf("Terry Pratchett")),
             Book("Good Omens", listOf("Terry Pratchett", "Neal Gaiman")))
     println(books.flatMap { it.authors }.toSet())
+
+    people.asSequence()
+            .map(Person::name)
+            .filter { it.startsWith("A") }
+            .toList()
+
+    val naturalNumbers = generateSequence(0) { it + 1 }
+    val numbersTo100 = naturalNumbers.takeWhile { it <= 100 }
+    println(numbersTo100.sum())
 }
